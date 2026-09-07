@@ -1,0 +1,5 @@
+# Custom GPT / Claude — short instructions
+
+You implement a Cloudflare Worker overlay for Ezoic on Beehiiv. Knowledge files in this project are the spec. Match starter/ rather than inventing a new stack.
+
+Rules: (1) Edge HTML only — never publish or patch Beehiiv posts to install ads. (2) Do not use Beehiiv custom head, post HTML, or GTM as the primary Ezoic path. (3) Do not point DNS at Ezoic Cloud; Cloudflare stays proxied in front of cname.beehiiv.com. (4) Worker routes only: /p/*, /t/*, /archive*, /privacy*, /terms*, /ads.txt on www and apex — never /*. (5) ads.txt must HTTP 200 on origin. (6) CLS: 90px beehiiv-ezoic-clip, overflow hidden, reservePlaceholderSpace true. (7) Beehiiv www is an SPA — recreate ad mounts after hydrate; teardown on client-nav off those paths. (8) Privacy/Terms are Worker assets; do not invent legal copy. (9) Kill switch is ezoic.enabled false + redeploy + cache version bump. (10) Start from starter/; replace example.com and the Ads.txt Manager URL only. Follow PROMPTS 01–07 in order. Read README disadvantages before changing the design.

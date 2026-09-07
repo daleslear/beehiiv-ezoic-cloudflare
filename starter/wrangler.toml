@@ -1,0 +1,51 @@
+name = "beehiiv-ezoic-overlay"
+main = "src/worker.js"
+compatibility_date = "2026-08-07"
+workers_dev = true
+
+# Do not commit account_id or API tokens. Wrangler uses your login / env.
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# Replace example.com with your apex. Duplicate the block for www and apex.
+# Do not add a /* catch-all.
+
+[[routes]]
+pattern = "www.example.com/p/*"
+zone_name = "example.com"
+[[routes]]
+pattern = "www.example.com/t/*"
+zone_name = "example.com"
+[[routes]]
+pattern = "www.example.com/archive*"
+zone_name = "example.com"
+[[routes]]
+pattern = "www.example.com/ads.txt"
+zone_name = "example.com"
+[[routes]]
+pattern = "www.example.com/privacy*"
+zone_name = "example.com"
+[[routes]]
+pattern = "www.example.com/terms*"
+zone_name = "example.com"
+[[routes]]
+pattern = "example.com/p/*"
+zone_name = "example.com"
+[[routes]]
+pattern = "example.com/t/*"
+zone_name = "example.com"
+[[routes]]
+pattern = "example.com/archive*"
+zone_name = "example.com"
+[[routes]]
+pattern = "example.com/ads.txt"
+zone_name = "example.com"
+[[routes]]
+pattern = "example.com/privacy*"
+zone_name = "example.com"
+[[routes]]
+pattern = "example.com/terms*"
+zone_name = "example.com"
