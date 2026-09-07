@@ -20,7 +20,7 @@ I want this architecture:
 - `/ads.txt` is HTTP **200** on origin (fetch Ads.txt Manager, optional extra DIRECT lines). Not a 302-only setup
 - Kill switch: `ezoic.enabled = false` + redeploy. No Beehiiv publish.
 
-Read `README.md` (including Disadvantages), `WHY.md`, and `starter/` before writing code.
+Read `README.md` (path-limited default + tradeoffs), `WHY.md`, and `starter/` before writing code.
 
 Work **one prompt at a time** from `PROMPTS/01` through `07`. Do not skip DNS. Do not “just add the Ezoic script to Beehiiv.” Do not invent API keys or publisher IDs — I will paste my Ads.txt Manager URL and domain.
 

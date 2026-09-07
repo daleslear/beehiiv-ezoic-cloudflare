@@ -30,7 +30,7 @@ Follow `PROMPTS/01` through `07`. Start from `starter/`. Fill placeholders (`exa
 
 ## Read first
 
-- `README.md` (including **Disadvantages**)
+- `README.md` (path-limited default + tradeoffs)
 - `WHY.md`
 - `CLS-AND-JITTER.md`
 - `starter/src/ezoic.js` and `starter/src/worker.js`
